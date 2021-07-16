@@ -3,7 +3,10 @@ const path = require('path');
 const request = require('postman-request'); 
 
 const apiKey = 'SVATWg4uEONtJv5jvYqvbyCrZv2loTtj';
+
 const app = express();
+const port = process.env.PORT || 3000;
+
 const publicDirectory = path.join(__dirname, '../public');
 console.log(publicDirectory);
 
@@ -96,7 +99,7 @@ app.get('/products',(req,res)=>
 // app.com/help
 // app.com/about
 
-app.listen(3000,()=>
+app.listen(port,()=>
 {
-    console.log("Server running on port 3000!");
+    console.log(`Server running on port ${port}!`);
 });
