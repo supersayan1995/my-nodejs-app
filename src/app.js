@@ -30,6 +30,15 @@ app.get('',(request,response)=>
     });
 });
 
+app.get('/newdata',(req,res)=>
+{
+    res.send(
+    {
+        data:"This is a new piece of data to check if code changes are working or not",
+        value:100
+    });
+});
+
 app.get('/sendJson',(request,response) =>
 {
     const data = 
